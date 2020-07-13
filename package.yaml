@@ -1,0 +1,24 @@
+activities:
+  entrypoint:
+    output: output
+    activityRoot: .
+    environment: 
+      path:
+        - bin
+        - entrypoints
+      pythonPath:
+        - variables
+        - libraries
+        - resources
+    action:
+      command:
+        - python
+        - -m
+        - robot
+        - -d
+        - output
+        - --logtitle
+        - Task log
+        - tasks/
+
+condaConfig: config/conda.yaml
